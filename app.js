@@ -3,7 +3,37 @@
 
 const getTimeLeft = () => {
   // ricavo il tempo di oggi
-  const today = new Date().getTime;
+  const today = new Date().getTime();
+  // sottraggo il tempo della scadenza a al tempo di oggi
+  const t = futureTime - today;
+  // ricavo i valori di giorni, ore, minuti e secondi in ms
+  const oneDay = 24 * 60 * 60 * 1000;
+
+  const oneHour = 60 * 60 * 1000;
+
+  const oneMinute = 60 * 1000;
+
+  // calcolo i valori
+  let days = t / oneDay;
+  // ricavo un intero dalla divisione
+  days = Math.floor(days);
+
+  let hours = Math.floor((t % oneDay) / oneHour);
+
+  let minutes = Math.floor((t % oneHour) / oneMinute);
+
+  let seconds = Math.floor((t % oneMinute) / 1000);
+
+  // creo un array coi valori di cui sopra
+
+  const values = [days, hours, minutes, seconds];
+
+  // faccio un ciclo per assegnare dinamicamente i valori ai campi
+  items.forEach((item, index) => {
+    // inietto i valori nei campi 
+    item.innerHTML = values[index];
+  });
+
 };
 
 const months = [
@@ -38,7 +68,7 @@ const items = document.querySelectorAll('.deadline-format h4');
 
 // dichiaro una variabile per stabilire la data di scadenza
 
-let futureDate = new Date(2024, 4, 24, 11, 30, 0);
+let futureDate = new Date(2025, 4, 24, 11, 30, 0);
 
 // estraggo dalla data i valori da inserire nella stringa
 
@@ -66,3 +96,5 @@ giveaway.innerText = deadlineString;
 // ricavo il tempo della scadenza in millisecondi
 
 const futureTime = futureDate.getTime();
+
+getTimeLeft();
