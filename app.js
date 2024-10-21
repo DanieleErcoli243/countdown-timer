@@ -1,3 +1,11 @@
+
+// creo una funzione per sottrarre il tempo della scadenza al giorno di oggi in ms
+
+const getTimeLeft = () => {
+  // ricavo il tempo di oggi
+  const today = new Date().getTime;
+};
+
 const months = [
   "January",
   "February",
