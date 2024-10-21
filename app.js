@@ -33,10 +33,8 @@ const getTimeLeft = () => {
 
   // faccio un ciclo per assegnare dinamicamente i valori ai campi
   items.forEach((item, index) => {
-    // invoco la funzione per mettere lo zero davanti ai valori minori di 10
-    format(item);
     // inietto i valori nei campi 
-    item.innerHTML = values[index];
+    item.innerHTML = format(values[index]);
   });
 
 };
