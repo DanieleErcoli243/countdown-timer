@@ -107,6 +107,3 @@ let countdown = setInterval(() => {
   getTimeLeft();
 
 }, 1000);
-// invoco la funzione per iniettare il tempo rimanente nei campi 
-
-getTimeLeft();
