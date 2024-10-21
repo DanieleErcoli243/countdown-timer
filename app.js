@@ -1,4 +1,6 @@
 
+// creo una funzione per mettere lo zero davanti ai valori minori di 10
+const format = item => item < 10 ? `0${item}` : `${item}`
 // creo una funzione per sottrarre il tempo della scadenza al giorno di oggi in ms
 
 const getTimeLeft = () => {
@@ -28,8 +30,11 @@ const getTimeLeft = () => {
 
   const values = [days, hours, minutes, seconds];
 
+
   // faccio un ciclo per assegnare dinamicamente i valori ai campi
   items.forEach((item, index) => {
+    // invoco la funzione per mettere lo zero davanti ai valori minori di 10
+    format(item);
     // inietto i valori nei campi 
     item.innerHTML = values[index];
   });
