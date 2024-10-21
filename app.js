@@ -54,3 +54,7 @@ const deadlineString = `Giveaway ends on ${date} ${month} ${year} ${hours}:${min
 // inietto la stringa nell'elemento
 
 giveaway.innerText = deadlineString;
+
+// ricavo il tempo della scadenza in millisecondi
+
+const futureTime = futureDate.getTime();
