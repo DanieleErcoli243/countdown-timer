@@ -80,9 +80,17 @@ const items = document.querySelectorAll('.deadline-format h4');
 
 // dichiaro una variabile per stabilire la data di scadenza
 
-let futureDate = new Date(2025, 4, 24, 11, 30, 0);
+// let futureDate = new Date(2025, 4, 24, 11, 30, 0);
+
+// ricavo dei valori dinamici anziché scriverli 
+let tempDate = new Date();
+let tempYear = tempDate.getFullYear();
+let tempMonth = tempDate.getMonth();
+let tempDay = tempDate.getDate();
 
 // estraggo dalla data i valori da inserire nella stringa
+
+const futureDate = new Date(tempYear, tempMonth, tempDay + 10, 11, 30, 0);
 
 const year = futureDate.getFullYear();
 
