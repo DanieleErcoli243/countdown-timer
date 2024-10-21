@@ -100,4 +100,13 @@ giveaway.innerText = deadlineString;
 
 const futureTime = futureDate.getTime();
 
+// imposto un intervallo per il conto alla rovescia
+
+let countdown = setInterval(() => {
+  // invoco la funzione per il tempo rimanente
+  getTimeLeft();
+
+}, 1000);
+// invoco la funzione per iniettare il tempo rimanente nei campi 
+
 getTimeLeft();
