@@ -37,6 +37,15 @@ const getTimeLeft = () => {
     item.innerHTML = format(values[index]);
   });
 
+  // pongo le condizioni per interrompere il conto alla rovescia quando arriva a 0
+
+  if (t < 0) {
+    // interrompo l'intervallo
+    clearInterval(countdown);
+    // inietto una stringa nel campo della scadenza
+    deadline.innerHTML = `<h4 class="expired">Sorry this giveaway has expired<h4>`;
+  }
+
 };
 
 const months = [
@@ -107,3 +116,6 @@ let countdown = setInterval(() => {
   getTimeLeft();
 
 }, 1000);
+// invoco la funzione per iniettare il tempo rimanente nei campi 
+
+getTimeLeft();
