@@ -26,4 +26,4 @@ const weekdays = [
 
 const giveaway = document.querySelector('.giveaway');
 const deadline = document.querySelector('.deadline');
-const items = document.querySelector('.deadline-format h4');
+const items = document.querySelectorAll('.deadline-format h4');
