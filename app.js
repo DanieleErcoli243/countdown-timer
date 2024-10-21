@@ -47,3 +47,10 @@ const date = futureDate.getDate();
 
 const weekday = weekdays[futureDate.getDay()];
 
+// monto la stringa da inserire nella scadenza
+
+const deadlineString = `Giveaway ends on ${date} ${month} ${year} ${hours}:${minutes}am`;
+
+// inietto la stringa nell'elemento
+
+giveaway.innerText = deadlineString;
